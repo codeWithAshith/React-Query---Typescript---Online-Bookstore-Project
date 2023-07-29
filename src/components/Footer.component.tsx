@@ -7,9 +7,9 @@ const FooterComponent = () => {
         tempor inci ut labore et dolore.
       </p>
       <div>
-        <p className="text-sm text-slate-100">Addresss: 123 Pall Mall, London England</p>
-        <p className="text-sm text-slate-100">Email: hello@example.com</p>
-        <p className="text-sm text-slate-100">Phone: (012) 345 6789</p>
+        <p className="text-sm text-slate-100 mb-1">Addresss: 123 Pall Mall, London England</p>
+        <p className="text-sm text-slate-100 mb-1">Email: hello@example.com</p>
+        <p className="text-sm text-slate-100 mb-1">Phone: (012) 345 6789</p>
       </div>
     </div>
   );
