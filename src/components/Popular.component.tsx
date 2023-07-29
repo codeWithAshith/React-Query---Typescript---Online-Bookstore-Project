@@ -8,7 +8,7 @@ const PopularComponent = () => {
         <p className="text-slate-900 text-5xl mb-4 text-center my-16">
           Featured Collections
         </p>
-        <p className="text-slate-500 text-mdtext-center mb-8">
+        <p className="text-slate-500 text-md text-center mb-8">
           Contrary to popular belief, Lorem Ipsum is not simply random.
         </p>
         <ProductListComponent books={BOOKS} />
