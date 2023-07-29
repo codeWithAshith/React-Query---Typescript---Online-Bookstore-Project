@@ -1,7 +1,22 @@
-import React from "react";
+import FilterComponent from "../components/Filter.component";
+import ProductListComponent from "../components/ProductList.component";
+import SortComponent from "../components/Sort.component";
+import { BOOKS } from "../data/data";
 
 const ShopPage = () => {
-  return <div>ShopPage</div>;
+  return (
+    <div className="flex min-w-[100vw]">
+      <div className="min-w-80 w-72 ">
+        <FilterComponent />
+      </div>
+      <div className="flex-1">
+        <div className="m-8 w-auto flex justify-end">
+          <SortComponent />
+        </div>
+        <ProductListComponent books={BOOKS} />
+      </div>
+    </div>
+  );
 };
 
 export default ShopPage;

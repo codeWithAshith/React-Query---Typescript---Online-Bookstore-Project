@@ -8,7 +8,7 @@ interface Props {
 
 const ProductListComponent: React.FC<Props> = ({ books }) => {
   return (
-    <div className="mx-20 grid grid-cols-4 gap-4">
+    <div className="mx-8 grid grid-cols-4 gap-4">
       {books.map((book) => (
         <ProductItemComponent key={book.id} book={book} />
       ))}
