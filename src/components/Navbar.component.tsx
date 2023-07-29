@@ -1,6 +1,10 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import { LuLogOut } from "react-icons/lu";
+import { PAGES } from "../constants";
 
 const NavbarComponent = () => {
+  const navigate = useNavigate();
+
   return (
     <nav className="bg-white border-gray-200">
       <div className="flex items-center justify-between p-4">
@@ -8,42 +12,32 @@ const NavbarComponent = () => {
           BookStore
         </NavLink>
 
-        <ul className="font-medium flex rounded-lg gap-4">
+        <ul className="font-medium flex items-center rounded-lg gap-2">
+          {PAGES.map((page) => {
+            return (
+              <li>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive
+                      ? "p-2 px-6 text-white bg-slate-900 rounded-3xl"
+                      : "p-2 px-6 text-slate-900 hover:cursor-pointer hover:bg-slate-100 rounded-3xl"
+                  }
+                  to={page.path}
+                >
+                  {page.label}
+                </NavLink>
+              </li>
+            );
+          })}
           <li>
-            <NavLink
-              className={({ isActive }) =>
-                isActive
-                  ? "p-2 text-white bg-blue-900 rounded"
-                  : "p-2 text-blue-900 rounded"
-              }
-              to="/"
+            <div
+              className="p-2 px-4 text-slate-900 hover:cursor-pointer hover:bg-slate-100 rounded-3xl"
+              onClick={() => {
+                navigate("/login");
+              }}
             >
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              className={({ isActive }) =>
-                isActive
-                  ? "p-2 text-white bg-blue-900 rounded"
-                  : "p-2 text-blue-900 rounded"
-              }
-              to="/cart"
-            >
-              Cart
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              className={({ isActive }) =>
-                isActive
-                  ? "p-2 text-white bg-blue-900 rounded"
-                  : "p-2 text-blue-900 rounded"
-              }
-              to="/login"
-            >
-              Logout
-            </NavLink>
+              <LuLogOut />
+            </div>
           </li>
         </ul>
       </div>

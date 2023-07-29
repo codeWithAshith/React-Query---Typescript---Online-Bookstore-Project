@@ -1,6 +1,17 @@
+import BannerComponent from "../components/Banner.component";
+import FooterComponent from "../components/Footer.component";
+import PopularComponent from "../components/Popular.component";
+import SpecialOfferComponent from "../components/SpecialOffer.component";
 
 const HomePage = () => {
-  return <div className="min-h-[90vh] bg-blue-100">HomePage</div>;
+  return (
+    <div >
+      <BannerComponent />
+      <SpecialOfferComponent />
+      <PopularComponent />
+      <FooterComponent />
+    </div>
+  );
 };
 
 export default HomePage;
