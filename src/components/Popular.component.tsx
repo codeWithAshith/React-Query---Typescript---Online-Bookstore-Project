@@ -3,7 +3,7 @@ import ProductListComponent from "./ProductList.component";
 
 const PopularComponent = () => {
   return (
-    <div className="flex min-h-[100vh] bg-slate-100">
+    <div className="flex min-h-[100vh] bg-slate-100 pb-12">
       <div className="flex-1 flex flex-col px-8">
         <p className="text-slate-900 text-5xl mb-4 text-center my-16">
           Featured Collections

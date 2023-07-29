@@ -5,7 +5,7 @@ import { BOOKS } from "../data/data";
 
 const ShopPage = () => {
   return (
-    <div className="flex min-w-[100vw]">
+    <div className="flex min-w-[100vw] pb-10">
       <div className="min-w-80 w-72 ">
         <FilterComponent />
       </div>
