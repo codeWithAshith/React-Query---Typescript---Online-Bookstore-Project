@@ -3,3 +3,4 @@ npx tailwindcss init
 npm i react-router        
 npm i react-router-dom
 npm i react-icons
+npm i lottie-react
