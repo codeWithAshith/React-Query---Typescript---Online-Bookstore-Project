@@ -5,7 +5,7 @@ const SortComponent = () => {
     <div className="flex items-center">
       <p className="px-4 text-lg">Sort by:</p>
       <div>
-        <select className="bg-slate-50 border border-slate-300 text-slate-900 text-xs rounded-lg focus:ring-slate-500 focus:border-slate-500 block w-full p-1.5 ">
+        <select className="bg-slate-50 border border-slate-300 text-slate-900 text-xs rounded-lg block w-full p-1.5 ">
           <option selected value="new">
             Newest
           </option>
