@@ -8,7 +8,7 @@ const NavbarComponent = () => {
   return (
     <nav className="bg-white border-gray-200">
       <div className="flex items-center justify-between p-4">
-        <NavLink className="text-2xl font-semibold" to="/">
+        <NavLink className="text-2xl font-light tracking-widest" to="/">
           BookStore
         </NavLink>
 
