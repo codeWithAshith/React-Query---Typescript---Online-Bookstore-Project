@@ -44,7 +44,7 @@ const RegisterComponent = () => {
       <div>
         <ButtonComponent
           label="Register"
-          onClick={() => navigate("/")}
+          onClick={() => navigate("/login")}
           className="px-20 my-4"
         />
       </div>
