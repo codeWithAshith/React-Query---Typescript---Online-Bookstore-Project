@@ -1,5 +1,5 @@
 import { BOOKS } from "../../data/data";
-import ProductListComponent from "../items/ProductList.component";
+import BookListComponent from "../items/BookList.component";
 
 const PopularComponent = () => {
   return (
@@ -11,7 +11,7 @@ const PopularComponent = () => {
         <p className="text-slate-500 text-md text-center mb-8">
           Contrary to popular belief, Lorem Ipsum is not simply random.
         </p>
-        <ProductListComponent books={BOOKS} />
+        <BookListComponent books={BOOKS.slice(0, 4)} />
       </div>
     </div>
   );

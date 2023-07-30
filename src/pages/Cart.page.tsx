@@ -5,7 +5,7 @@ import { BOOKS } from "../data/data";
 
 const CartPage = () => {
   return (
-    <div className="flex min-h-screen bg-white border-t-2 border-slate-200">
+    <div className="flex min-h-screen bg-white">
       <div className="flex-1 p-16">
         <CartComponent cart={BOOKS} />
       </div>

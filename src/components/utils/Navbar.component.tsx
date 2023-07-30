@@ -6,7 +6,7 @@ const NavbarComponent = () => {
   const navigate = useNavigate();
 
   return (
-    <nav className="bg-white border-gray-200">
+    <nav className="bg-white border-b-2 border-slate-200">
       <div className="flex items-center justify-between p-4">
         <NavLink className="text-2xl font-light tracking-widest" to="/">
           BookStore

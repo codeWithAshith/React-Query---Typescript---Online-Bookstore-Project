@@ -3,13 +3,15 @@ import { Book } from "../../interfaces/books";
 
 import { MdOutlineAddShoppingCart } from "react-icons/md";
 import { BsInfoCircle, BsHeart } from "react-icons/bs";
+import { useNavigate } from "react-router";
 
 interface Props {
   book: Book;
 }
 
-const ProductItemComponent: React.FC<Props> = ({ book }) => {
+const BookItemComponent: React.FC<Props> = ({ book }) => {
   const [isHover, setHover] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div
@@ -30,7 +32,10 @@ const ProductItemComponent: React.FC<Props> = ({ book }) => {
           <div className="text-slate-900 text-xl">
             <MdOutlineAddShoppingCart />
           </div>
-          <div className="text-slate-900 text-xl">
+          <div
+            className="text-slate-900 text-xl"
+            onClick={() => navigate(`/book/${book.id}`)}
+          >
             <BsInfoCircle />
           </div>
           <div className="text-slate-900 text-xl">
@@ -42,4 +47,4 @@ const ProductItemComponent: React.FC<Props> = ({ book }) => {
   );
 };
 
-export default ProductItemComponent;
+export default BookItemComponent;
