@@ -1,11 +1,11 @@
 import FilterComponent from "../components/shop/Filter.component";
-import ProductListComponent from "../components/ProductList.component";
+import ProductListComponent from "../components/items/ProductList.component";
 import SortComponent from "../components/shop/Sort.component";
 import { BOOKS } from "../data/data";
 
 const ShopPage = () => {
   return (
-    <div className="flex min-w-[100vw] pb-10">
+    <div className="flex min-w-[100vw] pb-10 border-t-2 border-slate-200">
       <div className="min-w-80 w-72 ">
         <FilterComponent />
       </div>

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Book } from "../../interfaces/books";
-import ButtonComponent from "../Button.component";
 
 import { MdOutlineAddShoppingCart } from "react-icons/md";
 import { BsInfoCircle, BsHeart } from "react-icons/bs";

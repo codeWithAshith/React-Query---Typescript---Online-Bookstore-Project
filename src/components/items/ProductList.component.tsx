@@ -1,6 +1,6 @@
 import React from "react";
-import { Book } from "../interfaces/books";
-import ProductItemComponent from "./items/ProductItem.component";
+import { Book } from "../../interfaces/books";
+import ProductItemComponent from "./ProductItem.component";
 
 interface Props {
   books: Book[];

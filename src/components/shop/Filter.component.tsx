@@ -1,13 +1,14 @@
 import React from "react";
 import ButtonComponent from "../utils/Button.component";
+import DividerComponent from "../utils/Divider.component";
 
 const FilterComponent = () => {
   return (
     <div className="flex flex-col m-6 my-10">
-        {/* <p className="text-2xl tracking-wide font-light mb-2">Filter</p>
+      {/* <p className="text-2xl tracking-wide font-light mb-2">Filter</p>
         <div className="w-full h-[1px] bg-slate-900"></div> */}
       <p className="text-xl tracking-wide font-light my-2">Price</p>
-      <div className="w-full h-[1px] bg-slate-900"></div>
+      <DividerComponent />
       <div className="flex gap-2">
         <input
           type="text"
@@ -21,7 +22,7 @@ const FilterComponent = () => {
         />
       </div>
       <p className="text-xl tracking-wide font-light mb-2">Categories</p>
-      <div className="w-full h-[1px] bg-slate-900"></div>
+      <DividerComponent />
       <div className="flex gap-2">
         <select className="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg block w-full p-2 my-4">
           <option selected value="all">
@@ -32,7 +33,7 @@ const FilterComponent = () => {
         </select>
       </div>
       <p className="text-xl tracking-wide font-light mb-2">Author</p>
-      <div className="w-full h-[1px] bg-slate-900"></div>
+      <DividerComponent />
       <div className="flex flex-col items-start my-4">
         <div>
           <input
