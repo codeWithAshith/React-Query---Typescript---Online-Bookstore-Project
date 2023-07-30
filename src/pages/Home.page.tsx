@@ -1,7 +1,7 @@
-import BannerComponent from "../components/Banner.component";
-import CategoriesComponent from "../components/Categories.component";
-import PopularComponent from "../components/Popular.component";
-import SpecialOfferComponent from "../components/SpecialOffer.component";
+import BannerComponent from "../components/home/Banner.component";
+import CategoriesComponent from "../components/shop/Categories.component";
+import PopularComponent from "../components/home/Popular.component";
+import SpecialOfferComponent from "../components/home/SpecialOffer.component";
 
 const HomePage = () => {
   return (

@@ -1,6 +1,6 @@
-import fiction from "../images/fiction.png";
-import fantasy from "../images/fantasy.png";
-import crime from "../images/crime.png";
+import fiction from "../../images/fiction.png";
+import fantasy from "../../images/fantasy.png";
+import crime from "../../images/crime.png";
 import { useNavigate } from "react-router";
 
 const CategoriesComponent = () => {

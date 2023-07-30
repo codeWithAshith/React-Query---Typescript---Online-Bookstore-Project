@@ -1,5 +1,5 @@
-import { BOOKS } from "../data/data";
-import ProductListComponent from "./ProductList.component";
+import { BOOKS } from "../../data/data";
+import ProductListComponent from "../ProductList.component";
 
 const PopularComponent = () => {
   return (

@@ -1,6 +1,6 @@
 import Lottie from "lottie-react";
-import offer from "../images/offer.json";
-import ButtonComponent from "./utils/Button.component";
+import offer from "../../images/offer.json";
+import ButtonComponent from "../utils/Button.component";
 import { useNavigate } from "react-router";
 
 const SpecialOfferComponent = () => {

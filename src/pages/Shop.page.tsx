@@ -1,6 +1,6 @@
-import FilterComponent from "../components/Filter.component";
+import FilterComponent from "../components/shop/Filter.component";
 import ProductListComponent from "../components/ProductList.component";
-import SortComponent from "../components/Sort.component";
+import SortComponent from "../components/shop/Sort.component";
 import { BOOKS } from "../data/data";
 
 const ShopPage = () => {
