@@ -2,6 +2,7 @@ import FilterComponent from "../components/shop/Filter.component";
 import BookListComponent from "../components/items/BookList.component";
 import SortComponent from "../components/shop/Sort.component";
 import { BOOKS } from "../data/data";
+import PaginationComponent from "../components/shop/Pagination.component";
 
 const ShopPage = () => {
   return (
@@ -14,6 +15,7 @@ const ShopPage = () => {
           <SortComponent />
         </div>
         <BookListComponent books={BOOKS} />
+        <PaginationComponent />
       </div>
     </div>
   );
