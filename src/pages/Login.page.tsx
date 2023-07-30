@@ -1,7 +1,11 @@
-import React from "react";
+import LoginComponent from "../components/auth/Login.component";
 
 const LoginPage = () => {
-  return <div>LoginPage</div>;
+  return (
+    <div className="min-h-screen min-w-full flex justify-center items-center bg-slate-900">
+      <LoginComponent />
+    </div>
+  );
 };
 
 export default LoginPage;
