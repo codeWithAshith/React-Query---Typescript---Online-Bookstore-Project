@@ -7,8 +7,8 @@ const HomePage = () => {
   return (
     <div>
       <BannerComponent />
-      <SpecialOfferComponent />
       <CategoriesComponent />
+      <SpecialOfferComponent />
       <PopularComponent />
     </div>
   );

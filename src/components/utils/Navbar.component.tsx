@@ -1,6 +1,6 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import { LuLogOut } from "react-icons/lu";
-import { PAGES } from "../constants";
+import { PAGES } from "../../constants";
 
 const NavbarComponent = () => {
   const navigate = useNavigate();

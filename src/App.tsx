@@ -6,7 +6,7 @@ import CartPage from "./pages/Cart.page";
 import LoginPage from "./pages/Login.page";
 import RegisterPage from "./pages/Register.page";
 import { createBrowserRouter } from "react-router-dom";
-import LayoutComponent from "./components/Layout.component";
+import LayoutComponent from "./components/utils/Layout.component";
 
 const router = createBrowserRouter([
   {

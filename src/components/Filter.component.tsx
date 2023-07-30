@@ -1,5 +1,5 @@
 import React from "react";
-import ButtonComponent from "./Button.component";
+import ButtonComponent from "./utils/Button.component";
 
 const FilterComponent = () => {
   return (
