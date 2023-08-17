@@ -14,7 +14,7 @@ const ButtonComponent: React.FC<Props> = ({
   ...rest
 }) => {
   return (
-    <button
+    <button 
       {...rest}
       className={`border rounded-3xl p-2 px-6 ${
         variant === "default"

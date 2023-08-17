@@ -7,6 +7,7 @@ import LoginPage from "./pages/Login.page";
 import RegisterPage from "./pages/Register.page";
 import { createBrowserRouter } from "react-router-dom";
 import LayoutComponent from "./components/utils/Layout.component";
+import { AppProvider } from "./context/App.context";
 
 const router = createBrowserRouter([
   {
@@ -42,7 +43,11 @@ const router = createBrowserRouter([
 ]);
 
 const App = () => {
-  return <RouterProvider router={router} />;
+  return (
+    <AppProvider>
+      <RouterProvider router={router} />
+    </AppProvider>
+  );
 };
 
 export default App;
