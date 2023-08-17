@@ -4,6 +4,7 @@ import { Book } from "../../interfaces/books";
 import { MdOutlineAddShoppingCart } from "react-icons/md";
 import { BsInfoCircle, BsHeart } from "react-icons/bs";
 import { useNavigate } from "react-router";
+import { useAppContext } from "../../context/App.context";
 
 interface Props {
   book: Book;
@@ -12,6 +13,7 @@ interface Props {
 const BookItemComponent: React.FC<Props> = ({ book }) => {
   const [isHover, setHover] = useState(false);
   const navigate = useNavigate();
+  const { addToCart } = useAppContext();
 
   return (
     <div
@@ -29,7 +31,14 @@ const BookItemComponent: React.FC<Props> = ({ book }) => {
       </div>
       {isHover && (
         <div className="absolute rounded bg-slate-50 w-48 h-12 translate-y-28 flex p-4 items-center justify-center gap-6">
-          <div className="text-slate-900 text-xl">
+          <div
+            className="text-slate-900 text-xl"
+            onClick={() => {
+              if (!addToCart(book)) {
+                console.log("Book exists");
+              }
+            }}
+          >
             <MdOutlineAddShoppingCart />
           </div>
           <div

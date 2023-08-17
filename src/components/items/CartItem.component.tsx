@@ -2,6 +2,7 @@ import { useNavigate } from "react-router";
 import { Book } from "../../interfaces/books";
 
 import { MdOutlineDelete } from "react-icons/md";
+import { useAppContext } from "../../context/App.context";
 
 interface Props {
   book: Book;
@@ -9,7 +10,9 @@ interface Props {
 
 const CartItemComponent: React.FC<Props> = ({ book }) => {
   const navigate = useNavigate();
-  
+
+  const { removeCartItem } = useAppContext();
+
   return (
     <div className="flex text-slate-900 text-md my-2">
       <div
@@ -25,7 +28,10 @@ const CartItemComponent: React.FC<Props> = ({ book }) => {
       </div>
       <p className="w-28 flex justify-center self-center">1</p>
       <p className="w-28 flex justify-center self-center">₹ {book.price}</p>
-      <div className="w-28 text-xl text-red-500 self-center flex justify-center hover:cursor-pointer">
+      <div
+        className="w-28 text-xl text-red-500 self-center flex justify-center hover:cursor-pointer"
+        onClick={() => removeCartItem(book)}
+      >
         <MdOutlineDelete />
       </div>
     </div>

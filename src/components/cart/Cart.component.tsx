@@ -3,19 +3,18 @@ import DividerComponent from "../utils/Divider.component";
 import CartListComponent from "../items/CartList.component";
 import ButtonComponent from "../utils/Button.component";
 import { useNavigate } from "react-router";
-import { Book } from "../../interfaces/books";
+import { useAppContext } from "../../context/App.context";
 
-interface Props {
-  cart: Book[];
-}
-
-const CartComponent: React.FC<Props> = ({ cart }) => {
+const CartComponent = () => {
   const navigate = useNavigate();
+
+  const { cart } = useAppContext();
+
   return (
     <div className="bg-white h-full">
       <div className="flex justify-between text-slate-900 text-2xl mb-4">
         <p>My Cart</p>
-        <p className="px-6">3 Books</p>
+        <p className="px-6">{cart.length} Books</p>
       </div>
       <DividerComponent />
       <div className="my-4">

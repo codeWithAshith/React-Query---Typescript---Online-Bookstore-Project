@@ -3,7 +3,7 @@ import { Book } from "../interfaces/books";
 
 export type AppContextType = {
   cart: Book[];
-  addToCart: (book: Book) => void;
+  addToCart: (book: Book) => boolean;
   removeCartItem: (book: Book) => void;
 };
 
@@ -13,7 +13,11 @@ const AppProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
   const [cart, setCart] = React.useState<Book[]>([]);
 
   const addToCart = (book: Book) => {
-    setCart([...cart, book]);
+    if (!cart.find((c) => c.id === book.id)) {
+      setCart([...cart, book]);
+      return true;
+    }
+    return false;
   };
 
   const removeCartItem = (book: Book) => {
@@ -28,7 +32,7 @@ const AppProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
 };
 
 const useAppContext = () => {
-  return React.useContext(AppContext);
+  return React.useContext(AppContext) as AppContextType;
 };
 
 export { AppProvider, useAppContext };

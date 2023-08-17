@@ -1,9 +1,11 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import { LuLogOut } from "react-icons/lu";
 import { PAGES } from "../../constants";
+import { useAppContext } from "../../context/App.context";
 
 const NavbarComponent = () => {
   const navigate = useNavigate();
+  const { cart } = useAppContext();
 
   return (
     <nav className="bg-white border-b-2 border-slate-200">
@@ -24,7 +26,9 @@ const NavbarComponent = () => {
                   }
                   to={page.path}
                 >
-                  {page.label}
+                  {page.label === "Cart" && cart.length > 0
+                    ? `${page.label} (${cart.length})`
+                    : page.label}
                 </NavLink>
               </li>
             );
