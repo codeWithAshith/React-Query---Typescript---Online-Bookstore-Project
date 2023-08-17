@@ -17,7 +17,7 @@ const NavbarComponent = () => {
         <ul className="font-medium flex items-center rounded-lg gap-2">
           {PAGES.map((page) => {
             return (
-              <li>
+              <li key={page.label}>
                 <NavLink
                   className={({ isActive }) =>
                     isActive

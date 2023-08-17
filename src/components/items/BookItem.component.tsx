@@ -5,6 +5,7 @@ import { MdOutlineAddShoppingCart } from "react-icons/md";
 import { BsInfoCircle, BsHeart } from "react-icons/bs";
 import { useNavigate } from "react-router";
 import { useAppContext } from "../../context/App.context";
+import { useToast } from "../../context/Toast.context";
 
 interface Props {
   book: Book;
@@ -14,6 +15,7 @@ const BookItemComponent: React.FC<Props> = ({ book }) => {
   const [isHover, setHover] = useState(false);
   const navigate = useNavigate();
   const { addToCart } = useAppContext();
+  const { showToast } = useToast();
 
   return (
     <div
@@ -35,7 +37,7 @@ const BookItemComponent: React.FC<Props> = ({ book }) => {
             className="text-slate-900 text-xl"
             onClick={() => {
               if (!addToCart(book)) {
-                console.log("Book exists");
+                showToast("Book already exist in Cart!!!");
               }
             }}
           >

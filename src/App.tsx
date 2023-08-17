@@ -8,6 +8,7 @@ import RegisterPage from "./pages/Register.page";
 import { createBrowserRouter } from "react-router-dom";
 import LayoutComponent from "./components/utils/Layout.component";
 import { AppProvider } from "./context/App.context";
+import { ToastProvider } from "./context/Toast.context";
 
 const router = createBrowserRouter([
   {
@@ -45,7 +46,9 @@ const router = createBrowserRouter([
 const App = () => {
   return (
     <AppProvider>
-      <RouterProvider router={router} />
+      <ToastProvider>
+        <RouterProvider router={router} />
+      </ToastProvider>
     </AppProvider>
   );
 };
