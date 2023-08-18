@@ -5,6 +5,7 @@ export type AppContextType = {
   cart: Book[];
   addToCart: (book: Book) => boolean;
   removeCartItem: (book: Book) => void;
+  clearCart: () => void;
 };
 
 const AppContext = React.createContext<AppContextType | null>(null);
@@ -24,8 +25,10 @@ const AppProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
     setCart(cart.filter((c) => c.id !== book.id));
   };
 
+  const clearCart = () => setCart([]);
+
   return (
-    <AppContext.Provider value={{ cart, addToCart, removeCartItem }}>
+    <AppContext.Provider value={{ cart, addToCart, removeCartItem, clearCart }}>
       {children}
     </AppContext.Provider>
   );

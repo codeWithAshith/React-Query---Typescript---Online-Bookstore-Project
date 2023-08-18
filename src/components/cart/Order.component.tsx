@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import ButtonComponent from "../utils/Button.component";
 import DividerComponent from "../utils/Divider.component";
 import { useAppContext } from "../../context/App.context";
+import { useNavigate } from "react-router";
 
 const INITIAL_STATE = {
   total: 0,
@@ -13,7 +14,8 @@ const INITIAL_STATE = {
 
 const OrderComponent = () => {
   const [totalPrice, setTotalPrice] = useState(INITIAL_STATE);
-  const { cart } = useAppContext();
+  const { cart, clearCart } = useAppContext();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const total = cart.reduce((acc, curr) => {
@@ -23,11 +25,7 @@ const OrderComponent = () => {
 
     const tax = total * 0.18;
 
-    const totalCost =
-      totalPrice.total +
-      totalPrice.shipping +
-      totalPrice.discount +
-      totalPrice.tax;
+    const totalCost = total + totalPrice.shipping + totalPrice.discount + tax;
 
     setTotalPrice({
       ...totalPrice,
@@ -65,7 +63,10 @@ const OrderComponent = () => {
       <ButtonComponent
         className="self-center w-40 mt-4"
         label="Checkout"
-        onClick={() => {}}
+        onClick={() => {
+          clearCart();
+          navigate("/");
+        }}
       />
     </div>
   );
