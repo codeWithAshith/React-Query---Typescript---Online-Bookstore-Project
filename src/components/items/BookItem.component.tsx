@@ -6,6 +6,7 @@ import { BsInfoCircle, BsHeart } from "react-icons/bs";
 import { useNavigate } from "react-router";
 import { useAppContext } from "../../context/App.context";
 import { useToast } from "../../context/Toast.context";
+import { CONSTANT } from "../../constants";
 
 interface Props {
   book: Book;
@@ -38,6 +39,8 @@ const BookItemComponent: React.FC<Props> = ({ book }) => {
             onClick={() => {
               if (!addToCart(book)) {
                 showToast("Book already exist in Cart!!!");
+              } else {
+                showToast("Added to cart", CONSTANT.SUCCESS);
               }
             }}
           >
